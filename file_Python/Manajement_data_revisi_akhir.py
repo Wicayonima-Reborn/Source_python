@@ -180,8 +180,11 @@ class ManajemenSiswa:
                 os.system('cls')
             elif pilihan == "0":
                 print(GREEN + "\n👋 Keluar dari program.\n" + RESET)
-                print('Made BY Kelompok 1 and Support BY Kelas Terbuka, ChatGPT, and W3Schools\n')
-
+                print(BLUE + 'Made BY Kelompok 1 and Support BY Kelas Terbuka, ChatGPT, and W3Schools\n' + RESET)
+                break
+            else:
+                print( RED +  "Masukkan Angka Yang Benar!!!" + RESET)
+                
 # 📌 🔟 Menjalankan Program
 app = ManajemenSiswa()
 app.tampilkan_menu()
