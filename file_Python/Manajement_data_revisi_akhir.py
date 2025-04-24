@@ -45,7 +45,7 @@ class ManajemenSiswa:
         while True:
             try:
                 nama = input('Masukkan Nama Siswa: ').strip()
-                if re.match(r"^[A-Za-z]+$", nama):
+                if re.match(r"^[A-Za-z]{4,}$", nama):
                     return nama
                 print(RED + '🚫 Nama minimal harus 4 huruf dan hanya boleh berisi huruf dan spasi!\n' + RESET)
             except ValueError:
