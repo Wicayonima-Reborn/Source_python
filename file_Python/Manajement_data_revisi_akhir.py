@@ -11,15 +11,18 @@ RESET = "\033[0m"
 # 📌 Class Siswa
 class Siswa:
     def __init__(self, nama, usia, nilai):
+        """mendefinisikan variable nama, usia, nilai"""
         self.nama = nama
         self.usia = usia
         self.nilai = nilai
 
     def to_dict(self):
+        """mengubah variable ke dictionary"""
         return {'Nama': self.nama, 'Usia': self.usia, 'Nilai': self.nilai}
 # 📌 Class ManajemenSiswa
 class ManajemenSiswa:
     def __init__(self, filename='data_siswa.csv'):
+        """mendefinisikan variable filename dan siswa_list"""
         self.filename = filename
         self.siswa_list = self.load_data()
 
@@ -45,6 +48,7 @@ class ManajemenSiswa:
         while True:
             try:
                 nama = input('Masukkan Nama Siswa: ').strip()
+                """menfilter apa saja yang boleh dan yang tidak boleh ditulis"""
                 if re.match(r"^[A-Za-z]{4,}$", nama):
                     return nama
                 print(RED + '🚫 Nama minimal harus 4 huruf dan hanya boleh berisi huruf dan spasi!\n' + RESET)
@@ -165,7 +169,7 @@ class ManajemenSiswa:
             print('0️⃣  🚪 Keluar')
             print("=" * 40)
 
-            pilihan = input('📝 Pilih menu (0-7): ')
+            pilihan = input('📝 Pilih menu (0-6): ')
             if pilihan == "1":
                 self.tambah_siswa()
             elif pilihan == "2":
