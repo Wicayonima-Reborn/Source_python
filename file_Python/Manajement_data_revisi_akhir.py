@@ -140,16 +140,6 @@ class ManajemenSiswa:
         Returns:
         float: Nilai rata-rata siswa yang valid.
         """
-    def validasi_nilai(self):
-        """
-        Memvalidasi input nilai rata-rata siswa.
-
-        Fungsi ini meminta pengguna untuk memasukkan nilai rata-rata siswa dan memeriksa 
-        apakah nilai tersebut berada dalam rentang yang valid, yaitu antara 0 hingga 100.
-        
-        Returns:
-        float: Nilai rata-rata siswa yang valid.
-        """
         while True:
             try:
                 nilai = float(input("Masukkan Nilai Rata-rata: "))  # Mengambil input nilai dan mengonversinya ke float
@@ -180,7 +170,7 @@ class ManajemenSiswa:
         usia = self.validasi_usia()
         nilai = self.validasi_nilai()
 
-        # Membuat objek Siswa dengan data yang valid
+        # Membuat objek Siswa dengan data yang sudah di input
         siswa = Siswa(nama, usia, nilai)
         
         # Menambahkan objek Siswa ke dalam list siswa_list
@@ -190,7 +180,7 @@ class ManajemenSiswa:
         self.save_data()
         
         # Memberikan pesan bahwa siswa berhasil ditambahkan
-        print(GREEN + "✅ Siswa berhasil ditambahkan!\n" + RESET)
+        print(GREEN + '✅ Siswa berhasil ditambahkan!\n' + RESET)
 
 
     # 📌 Lihat Daftar Siswa dengan Format Tabel
